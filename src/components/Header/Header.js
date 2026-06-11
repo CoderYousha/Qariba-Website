@@ -2,7 +2,7 @@ import { Box, Button, Typography } from "@mui/material";
 import { NavLink } from "react-router-dom";
 import MenuIcon from '@mui/icons-material/Menu';
 import CloseIcon from '@mui/icons-material/Close';
-import Logo from "../images/logo/logo.jpeg";
+import Logo from "../../images/logo/logo.jpeg";
 import { useState } from "react";
 
 function Header() {

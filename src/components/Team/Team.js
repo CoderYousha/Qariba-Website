@@ -40,10 +40,10 @@ function Team() {
             <Box className='grid grid-cols-4 justify-items-center gap-x-10 max-sm:grid-cols-1 max-sm:gap-y-10'>
                 {
                     members.map((member, index) =>
-                        <Box key={index} className='rounded-lg bg-white overflow-hidden w-3/4 h-4/5 hover:shadow-[#C9A02A] shadow-md hover:shadow-md hover:-translate-y-2 transition-all duration-300 max-sm:h-[500px]' dir='rtl'>
+                        <Box key={index} className='rounded-lg bg-white w-3/4 h-4/5 hover:shadow-[#C9A02A] shadow-md hover:shadow-md hover:-translate-y-2 transition-all duration-300 max-sm:h-[500px]' dir='rtl'>
                             <Box className='h-1/2 relative'>
                                 <Box className="w-full h-full absolute opacity-0 hover:opacity-100 duration-300 transition-all" sx={{background: 'linear-gradient(to top, rgba(139,105,20,0.4), transparent)'}}></Box>
-                                <img src={member.image} className="h-full w-full"/>
+                                <img src={member.image} className="h-full w-full rounded-t-lg"/>
                             </Box>
                             <Box className='p-2'>
                                 <Typography variant="h5" fontWeight={800}>{member.name}</Typography>

@@ -39,7 +39,7 @@ function Clients() {
             <Typography variant="h4" fontWeight={800} className="text-[#6B4C11] text-center">عملاء نعتز بهم</Typography>
             <Box className='w-20 h-1 rounded-full bg-[#C9A02A] mx-auto mt-5'></Box>
 
-            <Box className='grid grid-cols-6 gap-x-10 px-12 max-sm:grid-cols-2'>
+            <Box className='grid grid-cols-6 gap-x-10 gap-y-5 px-12 max-sm:grid-cols-2'>
                 {
                     clients.map((client, index) => 
                         <img key={index} src={client.image} className="rounded-lg mt-10 hover:scale-110 transition-all duration-300"/>

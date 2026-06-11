@@ -9,7 +9,8 @@ import Translation from './translation/Translation';
 import { IntlProvider } from 'react-intl';
 import { useConstants } from './hooks/UseConstants';
 import { WebsiteRoutes } from './routes/WebsiteRoutes';
-import Header from './components/Header';
+import Header from './components/Header/Header';
+import Footer from './components/Footer/Footer';
 
 function App() {
   const { language } = useConstants();
@@ -24,7 +25,7 @@ function App() {
             <Routes>
               {
                 WebsiteRoutes().map((route, index) => 
-                  <Route path={route.path} element={<><Header />{route.element}</>} />
+                  <Route path={route.path} element={<><Header />{route.element}<Footer /></>} />
                 )
               }
             </Routes>
