@@ -69,7 +69,7 @@ function Starter() {
                 className="text-6xl md:text-7xl max-sm:!text-5xl !mb-6 leading-tight max-w-4xl text-[#F5D78E]" variant="h1"
                 sx={{ textShadow: "0 4px 32px rgba(201,160,42,0.25)" }} fontWeight={800}
             >
-                نصنع التميز
+                نصنع التميّز
                 <br />
                 <span className="text-[#FFFFFF]">ونبني النجاح</span>
             </Typography>

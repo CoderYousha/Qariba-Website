@@ -1,16 +1,20 @@
 import { Box, Typography } from "@mui/material";
+import { useNavigate } from "react-router-dom";
 
 function Services() {
+    const navigate = useNavigate();
     const services = [
         {
             id: 1,
             title: "تطوير البرمجيات",
             description: "نقدم حلولا رقمية متكاملة تشمل تطوير مواقع الويب وتطبيقات الموبايل والمتاجر الإلكترونية مع تصميم أنظمة مخصصة تلبي احتياجات الأعمال المختلفة كما نوفر خدمات ربط الأنظمة عبر APIs والصيانة والدعم المستمر لضمان الأداء والأمان وقابلية التوسع",
+            link: "software-service",
         },
         {
             id: 2,
             title: "التسويق الرقمي والسوشال ميديا",
             description: "نقدم حلول تسويق رقمي متكاملة تركز على تحقيق النمو وزيادة المبيعات من خلال الحملات الإعلانية الذكية، المحتوى الإبداعي، وتحسين الظهور في محركات البحث. نعتمد على البيانات والتحليل المستمر لبناء علامة تجارية قوية وتعظيم العائد على الاستثمار",
+            link: "marketing-service"
         },
         {
             id: 3,
@@ -36,7 +40,10 @@ function Services() {
                                 <Box className='w-10 h-0.5 bg-[#C9A02A] mt-3' dir='rtl'></Box>
                             </Box>
                             <Typography variant="body1" className="text-[#6B5B3E] pt-5" dir='rtl'>{service.description}</Typography>
-                            <Typography variant="body1" className="cursor-pointer absolute left-3 bottom-3 text-[#C9A02A]" dir='rtl'>عرض التفاصيل</Typography>
+                            {
+                                service.link &&
+                                <Typography variant="body1" className="cursor-pointer absolute left-3 bottom-3 text-[#C9A02A]" dir='rtl' onClick={() => navigate(service.link)}>عرض التفاصيل</Typography>
+                            }
                         </Box>
                     )
                 }
